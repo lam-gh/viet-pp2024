@@ -1,12 +1,28 @@
+SEPARATOR = "----------"
+
 def welcomeMessage():
+    print(SEPARATOR)
     print("q - quit")
     print("e - enter data")
     print("d - display data")
 
 def entryMessage():
-    return 
+    print(SEPARATOR)
+    print("Choose the data you want to enter:")
+    print("ns - number of students")
+    print("si - student information")
+    print("nc - number of courses")
+    print("ci - course information")
+    print("mk - mark")
 
 def displayMessage():
+    print(SEPARATOR)
+    print("Choose the data you want to display:")
+    print("c - courses")
+    print("s - students")
+    print("m - mark")
+
+
     return
 
 def enterNumberOfStudents():
