@@ -23,10 +23,32 @@ def displayMessage():
     print("m - mark")
 
 def entryAction():
-    return
+    action = input()
+    match action:
+        case "ns":
+            enterNumberOfStudents()
+        case "si":
+            enterStudentInfo()
+        case "nc":
+            enterNumberOfCourses()
+        case "ci":
+            enterCourseInfo()
+        case "mk":
+            enterMark()
+        case _: 
+            print("Unrecognized action. Please enter the correct key")
 
 def displayAction():
-    return
+    action = input()
+    match action:
+        case 'c':
+            displayCourses()
+        case 's':
+            displayStudents()
+        case 'm':
+            displayMarks()
+        case _: 
+            print("Unrecognized action. Please enter the correct key")
 
 def enterNumberOfStudents():
     return 
