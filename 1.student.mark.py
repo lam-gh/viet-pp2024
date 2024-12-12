@@ -22,7 +22,10 @@ def displayMessage():
     print("s - students")
     print("m - mark")
 
+def entryAction():
+    return
 
+def displayAction():
     return
 
 def enterNumberOfStudents():
@@ -58,8 +61,10 @@ def main():
                 exit()
             case 'e': 
                 entryMessage()
+                entryAction()
             case 'd': 
                 displayMessage()
+                displayAction()
             case _: 
                 print("Unrecognized action")
 
