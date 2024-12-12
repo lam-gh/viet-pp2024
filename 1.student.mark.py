@@ -66,7 +66,7 @@ def main():
                 displayMessage()
                 displayAction()
             case _: 
-                print("Unrecognized action")
+                print("Unrecognized action. Please enter the correct key")
 
 if __name__ == "__main__":
     main()
