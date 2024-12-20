@@ -101,6 +101,41 @@ def enterStudentInfo():
 
 # ================== MARKS ==================
 def enterMark():
+    print("Enter the number of marks: ")
+    numberOfMarks = int(input(">>>"))
+    return numberOfMarks
+
+def isValidCourseID(courseID):
+    return courseID in courses
+
+def isValidStudentID(studentID):
+    return studentID in students
+
+def enterMarkInfo():
+    global marks
+    amountOfMarks = enterMark()
+    for i in range(amountOfMarks):
+        print("Enter mark's information: ")
+        print("Course ID: ", end='')
+
+        while True:
+            courseID = input()
+            if isValidCourseID(courseID):
+                break
+            else:
+                print("Invalid course ID. Please enter again.")
+
+        print("Student ID: ", end='')
+        while True:
+            studentID = input()
+            if isValidStudentID(studentID):
+                break
+            else:
+                print("Invalid student ID. Please enter again.")
+
+        print("Mark: ", end='')
+        mark = float(input())
+        marks[courseID] = { "studentID": studentID, "mark": mark }
     return
 
 def displayCourses():
