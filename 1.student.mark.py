@@ -138,14 +138,23 @@ def enterMarkInfo():
         marks[courseID] = { "studentID": studentID, "mark": mark }
     return
 
+# ================== DISPLAY ==================
 def displayCourses():
-    return 
+    global courses
+    for course in courses:
+        print(f"ID: {course}, Name: {courses[course]}")
+    return
 
 def displayStudents():
-    return 
+    global students
+    for student in students:
+        print(f"ID: {student}, Name: {students[student]['name']}, DoB: {students[student]['dob']}")
+    return
 
 def displayMarks():
-    return 
+    global marks
+    for mark in marks:
+        print(f"Course ID: {mark}, Student ID: {marks[mark]['studentID']}, Mark: {marks[mark]['mark']}")
 
 def main():
     while True:
