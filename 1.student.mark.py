@@ -10,6 +10,8 @@ def checkData():
         print("Please enter course and student information first.")
         return 0
     return 1
+
+# ================== MESSAGES ==================
 def welcomeMessage():
     print(SEPARATOR)
     print("q - quit")
