@@ -56,7 +56,7 @@ def displayAction():
             displayStudents()
         case 'm':
             displayMarks()
-        case _: 
+        case _:
             print("Unrecognized action. Please enter the correct key")
 
 def enterNumberOfStudents():
@@ -84,19 +84,19 @@ def displayMarks():
     return 
 
 def main():
-    while True: 
+    while True:
         welcomeMessage()
         action = input()
         match action:
             case 'q':
                 exit()
-            case 'e': 
+            case 'e':
                 entryMessage()
                 entryAction()
-            case 'd': 
+            case 'd':
                 displayMessage()
                 displayAction()
-            case _: 
+            case _:
                 print("Unrecognized action. Please enter the correct key")
 
 if __name__ == "__main__":
