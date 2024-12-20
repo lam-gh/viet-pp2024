@@ -3,6 +3,13 @@ courses = {}
 marks = {}
 SEPARATOR = "----------"
 
+# ================== UTILITIES ==================
+def checkData():
+    global courses, students
+    if len(courses) == 0 or len(students) == 0:
+        print("Please enter course and student information first.")
+        return 0
+    return 1
 def welcomeMessage():
     print(SEPARATOR)
     print("q - quit")
