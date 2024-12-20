@@ -61,6 +61,9 @@ def displayAction():
         case _:
             print("Unrecognized action. Please enter the correct key")
 
+# ================== COURSES ==================
+
+# ================== STUDENTS ==================
 def enterNumberOfStudents():
     return 
 
