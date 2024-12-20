@@ -8,15 +8,15 @@ def welcomeMessage():
     print("q - quit")
     print("e - enter data")
     print("d - display data")
+    print(">>>", end='')
 
 def entryMessage():
     print(SEPARATOR)
     print("Choose the data you want to enter:")
-    print("ns - number of students")
-    print("si - student information")
-    print("nc - number of courses")
-    print("ci - course information")
-    print("mk - mark")
+    print("c - course information")
+    print("s - student information")
+    print("m - mark")
+    print(">>>", end='')
 
 def displayMessage():
     print(SEPARATOR)
@@ -24,21 +24,20 @@ def displayMessage():
     print("c - courses")
     print("s - students")
     print("m - mark")
+    print(">>>", end='')
 
+# ================== ACTIONS ==================
 def entryAction():
     action = input()
     match action:
-        case "ns":
-            enterNumberOfStudents()
-        case "si":
-            enterStudentInfo()
-        case "nc":
-            enterNumberOfCourses()
-        case "ci":
+        case "c":
             enterCourseInfo()
-        case "mk":
-            enterMark()
-        case _: 
+        case "s":
+            enterStudentInfo()
+        case "m":
+            if checkData():
+                enterMarkInfo()
+        case _:
             print("Unrecognized action. Please enter the correct key")
 
 def displayAction():
