@@ -1,3 +1,6 @@
+students = {}
+courses = {}
+marks = {}
 SEPARATOR = "----------"
 
 def welcomeMessage():
