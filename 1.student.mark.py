@@ -62,6 +62,22 @@ def displayAction():
             print("Unrecognized action. Please enter the correct key")
 
 # ================== COURSES ==================
+def enterNumberOfCourses():
+    print("Enter the number of courses:")
+    numberOfCourses = int(input(">>>"))
+    return numberOfCourses
+
+def enterCourseInfo():
+    global courses
+    amountOfCourses = enterNumberOfCourses()
+    for i in range(amountOfCourses):
+        print("Enter course's information: ")
+        print("ID: ", end='')
+        id = input()
+        print("Name: ", end='')
+        name = input()
+        courses[id] = name
+    return
 
 # ================== STUDENTS ==================
 def enterNumberOfStudents():
