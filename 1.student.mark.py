@@ -99,6 +99,7 @@ def enterStudentInfo():
         students[id] = { "name": name, "dob": dob }
     return
 
+# ================== MARKS ==================
 def enterMark():
     return
 
