@@ -81,16 +81,23 @@ def enterCourseInfo():
 
 # ================== STUDENTS ==================
 def enterNumberOfStudents():
-    return 
+    print("Enter the number of students:")
+    numberOfStudent = int(input(">>>"))
+    return numberOfStudent
 
 def enterStudentInfo():
-    return 
-
-def enterNumberOfCourses():
+    global students
+    amountOfStudents = enterNumberOfStudents()
+    for i in range(amountOfStudents):
+        print("Enter student's information: ")
+        print("ID: ", end='')
+        id = input()
+        print("Name: ", end='')
+        name = input()
+        print("Date of Birth: ", end='')
+        dob = input()
+        students[id] = { "name": name, "dob": dob }
     return
-
-def enterCourseInfo():
-    return 
 
 def enterMark():
     return
