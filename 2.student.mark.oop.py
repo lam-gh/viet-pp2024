@@ -88,6 +88,36 @@ class MarkCollection(Collection):
         print(SEPARATOR)
         for mark in self.items.values():
             print(mark)
+
+class SchoolManagement:
+    def __init__(self):
+        self.courses = CourseCollection()
+        self.students = StudentCollection()
+        self.marks = MarkCollection()
+
+    def entry_action(self):
+        action = input()
+        match action:
+            case "c":
+                self.courses.enter()
+            case "s":
+                self.students.enter()
+            case "m":
+                self.marks.enter()
+            case _:
+                print("Unrecognized action. Please enter the correct key")
+
+    def display_action(self, action):
+        match action:
+            case 'c':
+                self.courses.display()
+            case 's':
+                self.students.display()
+            case 'm':
+                self.marks.display()
+            case _:
+                print("Unrecognized action. Please enter the correct key")
+
 # ================== MESSAGES ==================
 # ================== MAIN ==================
 def main():
