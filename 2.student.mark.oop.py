@@ -71,6 +71,23 @@ class StudentCollection(Collection):
         print(SEPARATOR)
         for student in self.items.values():
             print(student)
+
+class MarkCollection(Collection):
+    def __init__(self):
+        self.items = {}
+
+    def enter(self):
+        amount = self.getAmount()
+        for _ in range(amount):
+            courseID = input("Enter course ID: ")
+            studentID = input("Enter student ID: ")
+            mark = input("Enter mark: ")
+            self.items[(courseID, studentID)] = Mark(courseID, studentID, mark)
+
+    def display(self):
+        print(SEPARATOR)
+        for mark in self.items.values():
+            print(mark)
 # ================== MESSAGES ==================
 # ================== MAIN ==================
 def main():
