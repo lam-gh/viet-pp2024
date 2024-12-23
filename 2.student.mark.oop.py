@@ -1,3 +1,5 @@
+SEPARATOR = "----------"
+
 # ================== CLASSES ==================
 class Student:
     def __init__(self, id, name, dob):
