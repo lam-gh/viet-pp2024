@@ -36,6 +36,22 @@ class Collection:
     def display(self):
         for item in self.items:
             print(item)
+
+class CourseCollection(Collection):
+    def __init__(self):
+        self.items = {}
+
+    def enter(self):
+        amount = self.getAmount()
+        for _ in range(amount):
+            id = input("Enter course ID: ")
+            name = input("Enter course name: ")
+            self.items[id] = Course(id, name)
+
+    def display(self):
+        print(SEPARATOR)
+        for course in self.items.values():
+            print(course)
 # ================== MESSAGES ==================
 # ================== MAIN ==================
 def main():
