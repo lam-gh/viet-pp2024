@@ -54,6 +54,23 @@ class CourseCollection(Collection):
         print(SEPARATOR)
         for course in self.items.values():
             print(course)
+
+class StudentCollection(Collection):
+    def __init__(self):
+        self.items = {}
+
+    def enter(self):
+        amount = self.getAmount()
+        for _ in range(amount):
+            id = input("Enter student ID: ")
+            name = input("Enter student name: ")
+            dob = input("Enter student DoB: ")
+            self.items[id] = Student(id, name, dob)
+
+    def display(self):
+        print(SEPARATOR)
+        for student in self.items.values():
+            print(student)
 # ================== MESSAGES ==================
 # ================== MAIN ==================
 def main():
