@@ -119,6 +119,29 @@ class SchoolManagement:
                 print("Unrecognized action. Please enter the correct key")
 
 # ================== MESSAGES ==================
+def welcomeMessage():
+    print(SEPARATOR)
+    print("q - quit")
+    print("e - enter data")
+    print("d - display data")
+    print(">>>", end='')
+
+def entryMessage():
+    print(SEPARATOR)
+    print("Choose the data you want to enter:")
+    print("c - course information")
+    print("s - student information")
+    print("m - mark")
+    print(">>>", end='')
+
+def displayMessage():
+    print(SEPARATOR)
+    print("Choose the data you want to display:")
+    print("c - courses")
+    print("s - students")
+    print("m - mark")
+    print(">>>", end='')
+
 # ================== MAIN ==================
 def main():
 if __name__ == "__main__":
