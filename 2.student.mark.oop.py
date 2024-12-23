@@ -24,6 +24,18 @@ class Mark:
 
     def __str__(self):
         return f"Course ID: {self.courseID}, Student ID: {self.studentID}, Mark: {self.mark}"
+
+class Collection:
+    def getAmount(self):
+        amount = int(input("Enter amount: "))
+        return amount
+
+    def enter(self):
+        pass
+
+    def display(self):
+        for item in self.items:
+            print(item)
 # ================== MESSAGES ==================
 # ================== MAIN ==================
 def main():
