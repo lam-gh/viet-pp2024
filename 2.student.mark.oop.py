@@ -15,6 +15,15 @@ class Course:
 
     def __str__(self):
         return f"ID: {self.id}, Name: {self.name}"
+
+class Mark:
+    def __init__(self, courseID, studentID, mark):
+        self.courseID = courseID
+        self.studentID = studentID
+        self.mark = mark
+
+    def __str__(self):
+        return f"Course ID: {self.courseID}, Student ID: {self.studentID}, Mark: {self.mark}"
 # ================== MESSAGES ==================
 # ================== MAIN ==================
 def main():
