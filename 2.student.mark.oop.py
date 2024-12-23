@@ -144,5 +144,21 @@ def displayMessage():
 
 # ================== MAIN ==================
 def main():
+    school = SchoolManagement()
+    while True:
+        welcomeMessage()
+        action = input()
+        match action:
+            case 'q':
+                exit()
+            case 'e':
+                entryMessage()
+                school.entry_action()
+            case 'd':
+                displayMessage()
+                school.display_action(input())
+            case _:
+                print("Unrecognized action. Please enter the correct key")
+
 if __name__ == "__main__":
     main()
